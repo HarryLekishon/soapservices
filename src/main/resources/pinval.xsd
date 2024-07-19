@@ -1,0 +1,37 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http:generated"
+           targetNamespace="http:generated"
+           elementFormDefault="qualified">
+    <!-- Define the validateTaxpayerID request element -->
+    <xs:element name="validateTaxpayerIDRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="loginId" type="xs:string"/>
+                <xs:element name="password" type="xs:string"/>
+                <xs:element name="typeOfTaxpayer" type="xs:string"/>
+                <xs:element name="taxpayerID" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Define the root element -->
+    <xs:element name="RESPONSE">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="RESULT">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ResponseCode" type="xs:string" minOccurs="0"/>
+                            <xs:element name="Message" type="xs:string" minOccurs="0"/>
+                            <xs:element name="Status" type="xs:string" minOccurs="0"/>
+                            <xs:element name="PIN" type="xs:string" minOccurs="0"/>
+                            <xs:element name="TaxpayerName" type="xs:string" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
